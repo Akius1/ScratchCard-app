@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="create.css" type="text/css" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul class="nav">
+            <li class="nav-i">
+                <a class="nav-link active" href="#" ><img src="../img/logo.png" style="width:5em; height:3.5em" /></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Sign Out</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+    
+        
+         <div class="select">
+            <select class="custom-select" id="amount">
+                <option selected>Select Amount</option>
+                <option value="100">#100</option>
+                <option value="200">#200</option>
+                <option value="500">#500</option>
+                <option value="750">#750</option>
+                <option value="1000">#1000</option>
+            </select>
+        </div>
+        
+        
+        <div class = "bg">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-sx-12">
+                    <div id="container">
+                        <h3 id="secondh3">Generate Pin</h3><br>
+                        <button id="generate" class="btn btn-primary btn-block">Generate Pin</button>
+                        <!--Generated Pin detail display-->
+                        <div id="display">
+                         <h6>Recharge pin:<h6>
+            
+                        <h6>Serial Code:<h6>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-md-4 col-sm-4 col-sx-12">
+                    <div id="container">
+                        <h3 id="secondh3">View Pins</h3><br>
+                        
+                        <button id="view" class="btn btn-primary btn-block"> <a style="color:white"  href="./total.html">View Pins</a>   </button>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-4 col-sx-12">
+                    <div id="container">
+                        <h3 id="secondh3">View/Test Card</h3><br>
+                        <form action="" id="form">
+                            <input type="text" maxlength="10" id="validate" placeholder="Enter Id Number" required>
+                            <button id="validatebtn" type="submit" class="btn btn-primary">Display</button>            
+                            <button id="deletebtn" type="submit" class="btn btn-primary">delete</button><br>
+                        </form>
+                        <div id = "dis">
+                            <h4>Recharge pin:<h4>
+                        
+                            <h4>Id Number:<h4>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            
+            </div>
+        </div>
+    
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="create.js"> </script>
+        <script src="view.js"></script>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
