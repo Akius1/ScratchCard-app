@@ -27,7 +27,12 @@
                     if(idArray[i]==id){ 
                         var pinValue = pinArray[id]["pin"];
                         //alert("RECHARGE PIN IS VALID");
-                        return $('#dis').html('<h4>Recharge pin:'+' '+pinValue+'</h4>'+' '+'\n'+''+'<h4>Id Number:'+" "+id+'</h4>'); 
+                        //$('#dis').html('<h4>Recharge pin:'+' '+pinValue+'</h4>'+' '+'\n'+''+'<h4>Id Number:'+" "+id+'</h4>');
+                        return $('#dis').html(`<div class="overflow-auto"><h4>Pin: ${pinValue}</h4><h4>id: ${id}</h4></div>`).css({
+                            'background-color':'#fff',
+                            'border':' 2px solid blue',
+                            'border-radius': '10px'
+                        }); 
                     }
                 }
                  alert("RECHARGE PIN IS INVALID");

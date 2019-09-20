@@ -43,7 +43,6 @@ $(document).ready(function(){
                     'margin': '5em',
                     'padding': '2em',
                     'background-size': 'cover', 
-                    //'height': '50vh',
                     'border':' 2px solid yellow',
                     'border-radius': '10px'
                 });        

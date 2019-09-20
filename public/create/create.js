@@ -25,7 +25,11 @@ $(document).ready(function(){
         }
     
         //Displaying Recharge Pin and Serial Number on Div on HTML page
-        $('#display').html('<h6>Recharge pin:'+' '+pin+'</h6>'+' '+'\n'+''+'<h6>Serial Code:'+" "+serial+'</h6>');
+        $('#display').html(`<div class="overflow-auto"><h4>Pin: ${pin}</h4><h4>id: ${serial}</h4></div>`).css({
+            'background-color':'#fff',
+            'border':' 2px solid blue',
+            'border-radius': '10px'
+        }); 
 
          //Getting generated Pin and serial number values in to an object 
         var pin ={

@@ -21,29 +21,27 @@
             </li>
         </ul>
     
-        
+        <div class = "bg">     
          <div class="select">
             <select class="custom-select" id="amount">
                 <option selected>Select Amount</option>
-                <option value="100">#100</option>
-                <option value="200">#200</option>
-                <option value="500">#500</option>
-                <option value="750">#750</option>
-                <option value="1000">#1000</option>
+                <option value="100">&#8358;100</option>
+                <option value="200">&#8358;200</option>
+                <option value="500">&#8358;500</option>
+                <option value="750">&#8358;750</option>
+                <option value="1000">&#8358;1000</option>
             </select>
         </div>
         
         
-        <div class = "bg">
-            <div class="row">
-                <div class="col-md-4 col-sm-4 col-sx-12">
+       
+            <div class="row adjusted">
+                <div class="col-md-4 col-sm-4 col-sx-12 ">
                     <div id="container">
                         <h3 id="secondh3">Generate Pin</h3><br>
                         
                         <button id="generate" class="btn btn-primary btn-block">Generate Pin</button>
-                       <!--<input type="datetime-local" class="form-control" value="2019-09-19"/>-->
-                        <!--Generated Pin detail display-->
-                        <div id="display">
+                        <div id="display" class="display">
                          <h6>Recharge pin:<h6>
             
                         <h6>Serial Code:<h6>
@@ -63,14 +61,18 @@
                     <div id="container">
                         <h3 id="secondh3">View/Test Card</h3><br>
                         <form action="" id="form">
-                            <input type="text" maxlength="10" id="validate" placeholder="Enter Id Number" required>
-                            <button id="validatebtn" type="submit" class="btn btn-primary">Display</button>            
-                            <button id="deletebtn" type="submit" class="btn btn-primary">delete</button><br>
+                            <input type="text" maxlength="20" id="validate" class="input" placeholder="Enter Id Number" required/>
+                            <br>
+                            <div class="btn-control">
+                                <button id="validatebtn" type="submit" class="btn btn-primary btn-inline">Display</button>            
+                                <button id="deletebtn" type="submit" class="btn btn-primary btn-inline">delete</button>
+                            </div>
+                            <br>
                         </form>
                         <div id = "dis">
-                            <h4>Recharge pin:<h4>
+                            <h6>Recharge pin:</h6>
                         
-                            <h4>Id Number:<h4>
+                            <h6>Id Number:</h6>
                         </div>
                         
                     </div>
@@ -79,25 +81,14 @@
             
             </div>
         </div>
-        <!-- <script>
-            var now = new Date();
-            console.log(now)
-
-var day = ("0" + now.getDate()).slice(-2);
-console.log(day)
-var month = ("0" + (now.getMonth() + 1)).slice(-2);
-
-var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
-console.log(today)
-$('#datePicker').val(today);
-        </script> -->
-    
-
+    <footer class="footer">
+       <p>All Right Reserved MTN SCRATCHCARD APP, &copy; 2019</p>
+    </footer>
+        
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="create.js"> </script>
-        <script src="view.js"></script>
-       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="create.js"> </script>
+        <script src="view.js"></script>
     </body>
 </html>
