@@ -1,9 +1,8 @@
-$(document).ready(function(){
-
-    
+$(document).ready(function(){ 
     
     function show(){
         let pinArray = [];
+        // Getting current date
         var now = new Date();
 
         var day = ("0" + now.getDate()).slice(-2);
@@ -11,7 +10,7 @@ $(document).ready(function(){
         var month = ("0" + (now.getMonth() + 1)).slice(-2);
 
         var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
-
+        //Getting data from db  
         $.get('http://localhost:3000/pin',function(data){
             $.each(data,function(i,pin){
                 pinArray.push(pin);
@@ -28,11 +27,12 @@ $(document).ready(function(){
               </tr>
             </thead>
             </table>`)
+            // looping and getting desired value
             for(var i=0; i<pinArray.length; i++){
                 let value = pinArray[i]["pin"];
                 let amount = pinArray[i]["amount"];
                 let id =pinArray[i]["id"];
-                //$('.row').append(`<div class="col-md-4"><li><a href="#">${value}</a></li><li>amount: ${amount}</li><li>Validity: Valid</li></div>`)
+               
                 $('.row').append(`<table class="table table-dark">
                 <tbody><tr><th scope="row">${id}</th><td><a href="#"> ${value}</a></td><td>N${amount}</td><td>${today}</td></tr></tbody></table>`).css({
                     'background-color':'#ccc',
@@ -50,7 +50,6 @@ $(document).ready(function(){
         })
     }
     show()
-       
       
         
         
