@@ -11,7 +11,7 @@
             var pinArray=[];
             
     
-            //Geting Existing Serial Numbers from the database (db.json)
+            //Geting Existing ID from the database (db.json) and pushing it to an empty array
     
             $.get('http://localhost:3000/pin',function(data){
                 $.each(data,function(i,pin){
@@ -20,14 +20,13 @@
                    
                 })
                
-                console.log(pinValue);
-                //Checking if serial Number Already Exists on the database (db.json)
+                //console.log(pinValue);
+                //Checking if ID Already Exists on the database (db.json)
                 for(var i=0; i<idArray.length; i++){
                 
                     if(idArray[i]==id){ 
                         var pinValue = pinArray[id]["pin"];
-                        //alert("RECHARGE PIN IS VALID");
-                        //$('#dis').html('<h4>Recharge pin:'+' '+pinValue+'</h4>'+' '+'\n'+''+'<h4>Id Number:'+" "+id+'</h4>');
+                        
                         return $('#dis').html(`<div class="overflow-auto"><h4>Pin: ${pinValue}</h4><h4>id: ${id}</h4></div>`).css({
                             'background-color':'#fff',
                             'border':' 2px solid blue',
@@ -48,19 +47,18 @@
             
                 
         var input = $("#validate").val()
-        var id= $('input#validate').val();
+        //var id= $('input#validate').val();
 
         $.getJSON('http://localhost:3000/pin', function(pins){
             $.each(pins, function(index, value){
                 if(value.id === input){
                     id += value.id;
-                    console.log(value) 
                 }
             })
             //alert(id)
             $.ajax({
                 type:"DELETE",
-                url:`http://localhost:3000/pin/${id}`,
+                url:`http://localhost:3000/pin/${input}`,
                 success: function(){
                     return alert("Deleted");
                 },
